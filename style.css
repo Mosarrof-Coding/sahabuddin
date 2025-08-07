@@ -1,0 +1,24 @@
+.container {
+  display: grid;
+  place-items: center;
+  width: screen;
+}
+
+.image,
+.moss {
+  width: 100vw;
+  background-color: #3a399a;
+}
+.moss .image2 {
+  width: 100%;
+}
+body {
+  background: #3e28ce3a;
+}
+@media (min-width: 991px) {
+  .image,
+  .moss {
+    display: inline-block;
+    width: 70vw;
+  }
+}
