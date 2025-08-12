@@ -11,6 +11,8 @@
 .image {
   width: 100vw;
   background-color: #3a399a;
+  z-index: 10;
+  overflow: hidden;
 }
 body {
   background: #3e28ce3a;
@@ -18,5 +20,33 @@ body {
 @media (min-width: 991px) {
   .image {
     width: 70vw;
+  }
+}
+.animate {
+  position: relative;
+  z-index: 1;
+}
+.animate .runner {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    white,
+    rgba(255, 255, 255, 0)
+  );
+  width: 3.2%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  animation: bounce 10s linear infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(110%);
   }
 }
